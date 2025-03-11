@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  max-width: 700px;
+  height: 500px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 10px;
+}
+.container .child1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50px;
+  height: 30px;
+  margin: 20px;
+}
+.container .child1 img {
+  border-radius: 2px;
+}
+.container .child2 {
+  position: absolute;
+  left: 100px;
+  top: 20px;
+}
+.container .child2 img {
+  border-radius: 3px;
+}
+.container .child3 {
+  font-weight: 500;
+  position: absolute;
+  left: 400px;
+  top: 20px;
+}
+.container .child3 #price {
+  margin-top: 10px;
+  color: rgba(187, 187, 187, 0.7333333333);
+}
+.container .child3 .feedback {
+  display: flex;
+  margin-top: 20px;
+  color: rgba(187, 187, 187, 0.7333333333);
+}
+.container .child3 #item {
+  position: relative;
+  display: inline-block;
+  background-color: rgba(187, 187, 187, 0.7333333333);
+  width: 3px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  top: -5px;
+  margin: auto 15px;
+}
+.container .child3 i {
+  color: yellow;
+}
+.container .child3 .size p {
+  color: rgba(187, 187, 187, 0.7333333333);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.container .child3 .size .size-item {
+  display: flex;
+  gap: 20px;
+}
+.container .child3 .size .size-item div {
+  min-width: 50px;
+  min-height: 20px;
+  background-color: rgb(249, 241, 231);
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+.container .child3 .size .size-item div:hover {
+  background-color: rgb(184, 142, 47);
+}
+.container .child3 .color p {
+  color: rgba(187, 187, 187, 0.7333333333);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.container .child3 .color .color-item {
+  display: flex;
+  gap: 20px;
+}
+.container .child3 .color .color-item div {
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+}
+.container .child3 .color .color-item #black {
+  background-color: black;
+}
+.container .child3 .color .color-item #brow {
+  background-color: rgb(184, 142, 47);
+}
+.container .child3 .color .color-item #tim {
+  background-color: rgb(129, 109, 250);
+}/*# sourceMappingURL=main.css.map */

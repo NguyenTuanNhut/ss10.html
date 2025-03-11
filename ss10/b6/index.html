@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .news-container {
+            max-width: 700px;
+            height: 500px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .image {
+            width: 100%;
+            height: 400px;
+            display: block;
+        }
+        .box{
+            position: relative;
+        }
+        .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to left, rgba(0, 0, 8, 0.9), rgba(0, 0, 0, 0.2));
+}
+        .content {
+            position: relative;
+            padding: 20px;
+            color: #f4f4f4;
+            opacity: 0.6;
+            bottom: 250px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .subtitle {
+            color: gray;
+            margin: 10px 0;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            gap: 5px;
+            position: relative;
+            bottom: 100px;
+            left: 200px;
+        }
+        .but{
+            position: relative;
+            display: flex;
+            width: 100px;
+            height: 30px;
+            border: 1px solid white;
+            border-radius: 3px;
+            justify-content: center;
+            align-items: center;
+            bottom: 100px;
+        }
+        .page-button {
+            background-color: white;
+            color: #555;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .page-button:hover {
+            background-color: #0b0b0b;
+            color: #f4f4f4;
+        }
+        .page-active {
+            color: white;
+            border-radius: 10px;
+            background-color: #555;
+            opacity: 0.5;
+        }
+        img{
+            width: 100%;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="news-container">
+       
+        <div class="box">
+            <img src="data:image/jpeg;base64,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" alt="Image" class="image">
+
+            <div class="overlay"></div>
+        </div>
+        
+        <div class="content">
+            <div class="but">Football</div>
+            <div class="subtitle">Agence France-Presse - 04 June 2023</div>
+            <div class="title">LIONEL MESSI LEAVING LIGUE 1 TEAM PARIS SAINT-GERMAIN, CLUB CONFIRMS</div>
+            <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals.</p>
+        </div>
+       
+
+    </div>
+    <div class="pagination">
+        <button class="page-active page-button">←</button>
+        <button class="page-button ">1</button>
+        <button class="page-button">2</button>
+        <button class="page-button">3</button>
+        <button class="page-button">4</button>
+        <button class="page-active page-button">→</button>
+    </div>
+ 
+</body>
+</html>
